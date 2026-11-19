@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum Roadmap — GTA VI Trophy Guide</title>
+<meta name="description" content="The complete offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: checklist, roadmap to platinum, missable warnings and a guide for every trophy.">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<header class="hero">
+  <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+  <h1>Leonida Platinum Roadmap</h1>
+  <p class="lede">Every trophy in GTA VI, with a plain-words guide for each one, a checklist that saves in your browser, and a step-by-step road to the platinum. Works fully offline — no account, no network, nothing leaves your device.</p>
+  <div class="progress-wrap" aria-label="Overall progress">
+    <div class="progress-bar"><div id="progressFill" class="progress-fill" style="width:0%"></div></div>
+    <p id="progressText" class="progress-text">0 of 55 earned &middot; 0 points</p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <button type="button" class="tab active" data-view="checklist">Checklist</button>
+  <button type="button" class="tab" data-view="roadmap">Roadmap</button>
+  <button type="button" class="tab" data-view="missable">Missable</button>
+  <button type="button" class="tab" data-view="about">About</button>
+</nav>
+
+<main>
+  <section id="view-checklist" class="view">
+    <div class="controls">
+      <label>Search <input id="search" type="search" placeholder="Trophy name or keyword" autocomplete="off"></label>
+      <label>Kind
+        <select id="filterKind">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="exploration">Exploration</option>
+          <option value="activity">Activities</option>
+          <option value="collectible">Collectibles</option>
+          <option value="combat">Combat</option>
+          <option value="driving">Driving</option>
+          <option value="completion">Completion</option>
+        </select>
+      </label>
+      <label>Grade
+        <select id="filterGrade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label>Status
+        <select id="filterStatus">
+          <option value="all">All</option>
+          <option value="earned">Earned</option>
+          <option value="unearned">Not earned</option>
+          <option value="missable">Missable only</option>
+        </select>
+      </label>
+      <label class="check"><input id="spoilerToggle" type="checkbox"> Hide story spoilers until earned</label>
+    </div>
+    <div class="actions">
+      <button id="exportBtn" type="button">Export progress</button>
+      <button id="importBtn" type="button">Import progress</button>
+      <input id="importFile" type="file" accept="application/json,.json" hidden>
+      <button id="resetBtn" type="button" class="danger">Reset progress</button>
+      <span id="saveNote" class="save-note" role="status"></span>
+    </div>
+    <p id="emptyNote" class="empty-note" hidden>No trophies match these filters.</p>
+    <ul id="trophyList" class="trophy-list"></ul>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <h2>Road to the platinum</h2>
+    <p>Work the steps in order. Nothing here is missable except the two trophies flagged in step 2, so the cleanup phase can be done in any order after the credits.</p>
+    <ol class="roadmap">
+      <li><strong>Step 1 — Play the story.</strong> Follow Lucia and Jason from the prologue to the final score. Story trophies pop as you go, and the map opens up as you progress. No difficulty requirement.</li>
+      <li><strong>Step 2 — Mind the two missable trophies.</strong> Before the late-story mission with the informant, make a manual save (Loose Ends — spare them). At the final heist planning board, pick Lucia's plan (The Hard Call). Both are flagged in the checklist.</li>
+      <li><strong>Step 3 — Clear the heists and stranger missions.</strong> Finish every major heist and every stranger mission. These feed Kingpin's Vault, Friends in Low Places and the completion counter.</li>
+      <li><strong>Step 4 — Explore and collect.</strong> Visit every location, then sweep the collectible sets — hidden packages, postcards, vinyl records and buried treasure — district by district with the checklist open.</li>
+      <li><strong>Step 5 — Activities and races.</strong> Win each race series, finish the stunt jumps, and work through the clubs, golf, pool, darts, fishing, hunting and gym activities.</li>
+      <li><strong>Step 6 — Cleanup and grind.</strong> Mop up the cumulative trophies — headshots, miles driven, money spent — then check the stats page for 100 percent. The platinum pops with the last trophy.</li>
+    </ol>
+    <h3>Grade breakdown</h3>
+    <p id="gradeBreakdown" class="grade-breakdown">1 platinum &middot; 2 gold &middot; 6 silver &middot; 46 bronze &middot; 1,230 points in total.</p>
+  </section>
+
+  <section id="view-missable" class="view" hidden>
+    <h2>Missable trophies</h2>
+    <p>Only two trophies in the whole game can be missed. Both are story choices with no way back after the mission ends — make a manual save first.</p>
+    <ul id="missableList" class="trophy-list"></ul>
+  </section>
+
+  <section id="view-about" class="view" hidden>
+    <h2>About this guide</h2>
+    <p>An unofficial, fan-made guide. Grand Theft Auto and GTA are trademarks of Take-Two Interactive; this guide is not affiliated with or endorsed by Rockstar Games. All artwork here is original — no official logos or game art are used.</p>
+    <p>Your checklist is stored only in this browser's local storage. Export downloads a JSON file you can keep as a backup or move to another device; Import reads that file back. Nothing is uploaded anywhere.</p>
+    <h3>Sources</h3>
+    <p>Each trophy cites its sources in its detail view: the official Grand Theft Auto VI website from Rockstar Games and the in-game trophy list and stats screens on PlayStation 5.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Platinum Roadmap — an unofficial fan guide for Grand Theft Auto VI on PlayStation 5.</p>
+</footer>
+
+<script type="module" src="./main.js"></script>
+</body>
+</html>

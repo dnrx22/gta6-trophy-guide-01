@@ -1,0 +1,104 @@
+:root {
+  --bg: #14101d;
+  --panel: #1e1829;
+  --panel2: #262036;
+  --text: #f2eefb;
+  --muted: #b9b0cf;
+  --accent: #ff8a3d;
+  --accent2: #ffb347;
+  --teal: #39d0ba;
+  --danger: #ff5d5d;
+  --border: #3a304f;
+  --platinum: #bfe8ff;
+  --gold: #ffd75e;
+  --silver: #d7dbe2;
+  --bronze: #e0a075;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.55;
+}
+
+.hero {
+  padding: 2.5rem 1.25rem 1.5rem;
+  background: linear-gradient(135deg, #2b1740 0%, #14101d 55%, #0e2a26 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero h1 { margin: 0.25rem 0 0.5rem; font-size: 2.1rem; line-height: 1.15; }
+.eyebrow { margin: 0; color: var(--accent2); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.8rem; }
+.lede { max-width: 46rem; color: var(--muted); margin: 0.5rem 0 1rem; }
+
+.progress-wrap { max-width: 46rem; }
+.progress-bar { height: 0.7rem; background: var(--panel2); border-radius: 999px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent2)); transition: width 0.25s ease; }
+.progress-text { margin: 0.4rem 0 0; font-size: 0.9rem; color: var(--muted); }
+
+.tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; padding: 1rem 1.25rem 0; }
+.tab {
+  background: var(--panel); color: var(--text); border: 1px solid var(--border);
+  border-radius: 999px; padding: 0.5rem 1.1rem; cursor: pointer; font-size: 0.95rem;
+}
+.tab.active { background: var(--accent); border-color: var(--accent); color: #1a0e02; font-weight: 700; }
+
+main { padding: 1rem 1.25rem 2rem; max-width: 60rem; margin: 0 auto; }
+.view h2 { margin-top: 0.5rem; }
+
+.controls { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; align-items: end; margin: 0.5rem 0 1rem; }
+.controls label { display: flex; flex-direction: column; gap: 0.25rem; font-size: 0.85rem; color: var(--muted); }
+.controls label.check { flex-direction: row; align-items: center; gap: 0.5rem; color: var(--text); font-size: 0.95rem; }
+.controls input[type="search"], .controls select {
+  background: var(--panel); color: var(--text); border: 1px solid var(--border);
+  border-radius: 0.5rem; padding: 0.5rem 0.6rem; font-size: 0.95rem;
+}
+
+.actions { display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center; margin-bottom: 1rem; }
+.actions button {
+  background: var(--panel2); color: var(--text); border: 1px solid var(--border);
+  border-radius: 0.5rem; padding: 0.5rem 0.9rem; cursor: pointer; font-size: 0.95rem;
+}
+.actions button.danger { border-color: var(--danger); color: var(--danger); }
+.save-note { color: var(--teal); font-size: 0.9rem; min-height: 1.2em; }
+
+.trophy-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; }
+.trophy {
+  background: var(--panel); border: 1px solid var(--border); border-radius: 0.75rem;
+  padding: 0.9rem 1rem;
+}
+.trophy.earned { border-color: var(--teal); }
+.trophy-head { display: flex; gap: 0.75rem; align-items: baseline; flex-wrap: wrap; }
+.trophy-head h3 { margin: 0; font-size: 1.05rem; }
+.grade {
+  font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+  border: 1px solid var(--border); border-radius: 999px; padding: 0.1rem 0.55rem; white-space: nowrap;
+}
+.grade.platinum { color: var(--platinum); border-color: var(--platinum); }
+.grade.gold { color: var(--gold); border-color: var(--gold); }
+.grade.silver { color: var(--silver); border-color: var(--silver); }
+.grade.bronze { color: var(--bronze); border-color: var(--bronze); }
+.flag { font-size: 0.75rem; font-weight: 700; color: var(--danger); }
+.flag.spoiler { color: var(--accent2); }
+.trophy-desc { margin: 0.4rem 0; color: var(--muted); }
+.trophy-guide { margin: 0.4rem 0; }
+.trophy-sources { margin: 0.4rem 0 0; font-size: 0.82rem; color: var(--muted); }
+.trophy-foot { display: flex; gap: 1rem; align-items: center; margin-top: 0.6rem; flex-wrap: wrap; }
+.trophy-foot label { display: flex; gap: 0.45rem; align-items: center; cursor: pointer; font-weight: 600; }
+.points { font-size: 0.85rem; color: var(--muted); }
+.spoiler-hidden { color: var(--muted); font-style: italic; }
+
+.roadmap li { margin-bottom: 0.8rem; }
+.grade-breakdown { font-weight: 600; }
+.empty-note { color: var(--muted); }
+
+footer { border-top: 1px solid var(--border); padding: 1rem 1.25rem 2rem; color: var(--muted); font-size: 0.85rem; }
+
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
